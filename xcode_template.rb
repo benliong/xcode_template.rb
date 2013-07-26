@@ -5,7 +5,7 @@ class XcodeTemplate < ActiveRecord::Base
   self.abstract_class = true
   def self.xcode
     cname = self.name
-    path = "#{RAILS_ROOT}/#{cname}"
+    path =  "#{::Rails.root}/#{cname}"
     mpath = "#{path}.m"
     hpath = "#{path}.h"
     rpath = "#{path}-to-json.rb"
